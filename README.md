@@ -2,5 +2,6 @@
 Docker image for syslog-ng log server.
 
 # Run
-* docker run -d -v /var/log/hosts:/var/log/hosts -p 514:514 -p 514:514/udp --name syslog-test garyalex/docker-syslog-ng:latest
+* docker run -d -v /var/log -p 514:514 -p 514:514/udp --name syslog-test garyalex/docker-syslog-ng:latest
 
+Use --volumes-from=syslog-test on your logstash container
